@@ -77,22 +77,22 @@
 // The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     CatCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"catCell" forIndexPath:indexPath];
-    //check for imageView
-    
-    
-    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 180, 180)];
-
-    cell.imageView.clipsToBounds = YES;
-    cell.imageView.contentMode = UIViewContentModeScaleAspectFit;
-    [cell addSubview:cell.imageView];
-    // put image in imageview
     PhotoObject *tempObj = self.photoObjects[indexPath.item];
-    imageView.image = tempObj.image;
-    cell.imageView = imageView;
+    cell.imageView.image = tempObj.image;
+    cell.title.text = tempObj.name;
+//    ceimageView.image = tempObj.image;
+//    cell.imageView = imageView;
     return cell;
     
 }
     
     
-    
+
     @end
+//UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 180, 180)];
+//
+//cell.imageView.clipsToBounds = YES;
+//cell.imageView.contentMode = UIViewContentModeScaleAspectFit;
+//[cell addSubview:cell.imageView];
+//// put image in imageview
+
