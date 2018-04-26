@@ -51,6 +51,7 @@
                                         <connections>
                                             <outlet property="imageView" destination="4oz-Q6-2md" id="FOm-VN-wS7"/>
                                             <outlet property="title" destination="7H6-kP-LbV" id="xst-xi-Snb"/>
+                                            <segue destination="GFd-XU-1ef" kind="presentation" identifier="detailSegue" id="ocu-TV-wLy"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -61,6 +62,7 @@
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="9Th-I2-Smv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="4NW-YJ-g34"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="9Th-I2-Smv" secondAttribute="bottom" id="81u-9X-GjN"/>
@@ -76,6 +78,61 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="24.800000000000001" y="31.934032983508249"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="poz-sv-EQV">
+            <objects>
+                <viewController id="GFd-XU-1ef" customClass="DetailViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OaI-9m-hY6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2ry-12-JL9">
+                                <rect key="frame" x="0.0" y="114" width="375" height="553"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FXE-zH-tSF">
+                                <rect key="frame" x="16" y="20" width="343" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="343" id="kcL-Sd-LwW"/>
+                                    <constraint firstAttribute="height" constant="39" id="o3r-u6-85V"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VkF-3b-zHw">
+                                <rect key="frame" x="16" y="67" width="343" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="343" id="yD1-II-mk9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="2ry-12-JL9" firstAttribute="top" secondItem="VkF-3b-zHw" secondAttribute="bottom" constant="8" id="5Gr-7X-Hzh"/>
+                            <constraint firstItem="VkF-3b-zHw" firstAttribute="centerX" secondItem="MOo-55-8uJ" secondAttribute="centerX" id="6Sb-ax-BKH"/>
+                            <constraint firstItem="FXE-zH-tSF" firstAttribute="centerX" secondItem="MOo-55-8uJ" secondAttribute="centerX" id="I9R-qe-Xjy"/>
+                            <constraint firstItem="FXE-zH-tSF" firstAttribute="top" secondItem="MOo-55-8uJ" secondAttribute="top" id="OS6-S1-1Sb"/>
+                            <constraint firstItem="2ry-12-JL9" firstAttribute="leading" secondItem="MOo-55-8uJ" secondAttribute="leading" id="Qhc-dI-Wae"/>
+                            <constraint firstItem="VkF-3b-zHw" firstAttribute="top" secondItem="FXE-zH-tSF" secondAttribute="bottom" constant="8" id="Sb0-92-OUd"/>
+                            <constraint firstItem="2ry-12-JL9" firstAttribute="bottom" secondItem="MOo-55-8uJ" secondAttribute="bottom" id="qdl-ze-A3a"/>
+                            <constraint firstItem="2ry-12-JL9" firstAttribute="trailing" secondItem="MOo-55-8uJ" secondAttribute="trailing" id="rbJ-om-r5P"/>
+                            <constraint firstItem="VkF-3b-zHw" firstAttribute="height" secondItem="FXE-zH-tSF" secondAttribute="height" id="uTi-lg-75r"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="MOo-55-8uJ"/>
+                    </view>
+                    <connections>
+                        <outlet property="artistNameLabel" destination="VkF-3b-zHw" id="hTS-Ku-M0v"/>
+                        <outlet property="photo" destination="2ry-12-JL9" id="e0Q-nq-YU8"/>
+                        <outlet property="photoNameLabel" destination="FXE-zH-tSF" id="ERv-EC-Qdm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ePe-3O-7eD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="752.79999999999995" y="34.632683658170919"/>
         </scene>
     </scenes>
 </document>

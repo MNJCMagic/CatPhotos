@@ -15,6 +15,7 @@
 		27332229209247B800A9D607 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 27332228209247B800A9D607 /* main.m */; };
 		273322312092496300A9D607 /* PhotoObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 273322302092496300A9D607 /* PhotoObject.m */; };
 		27EC2393209267E500EDC448 /* CatCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 27EC2392209267E500EDC448 /* CatCollectionViewCell.m */; };
+		27EC23962092840E00EDC448 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27EC23952092840E00EDC448 /* DetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		273322302092496300A9D607 /* PhotoObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoObject.m; sourceTree = "<group>"; };
 		27EC2391209267E500EDC448 /* CatCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CatCollectionViewCell.h; sourceTree = "<group>"; };
 		27EC2392209267E500EDC448 /* CatCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CatCollectionViewCell.m; sourceTree = "<group>"; };
+		27EC23942092840E00EDC448 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		27EC23952092840E00EDC448 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +71,8 @@
 				2733221A209247B800A9D607 /* AppDelegate.m */,
 				2733221C209247B800A9D607 /* ViewController.h */,
 				2733221D209247B800A9D607 /* ViewController.m */,
+				27EC23942092840E00EDC448 /* DetailViewController.h */,
+				27EC23952092840E00EDC448 /* DetailViewController.m */,
 				2733222F2092496300A9D607 /* PhotoObject.h */,
 				273322302092496300A9D607 /* PhotoObject.m */,
 				2733221F209247B800A9D607 /* Main.storyboard */,
@@ -157,6 +162,7 @@
 				27332229209247B800A9D607 /* main.m in Sources */,
 				2733221B209247B800A9D607 /* AppDelegate.m in Sources */,
 				27EC2393209267E500EDC448 /* CatCollectionViewCell.m in Sources */,
+				27EC23962092840E00EDC448 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

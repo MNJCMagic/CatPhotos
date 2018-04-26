@@ -10,4 +10,6 @@
 @interface PhotoObject : NSObject
 @property (nonatomic, strong) UIImage* image;
 @property (nonatomic, strong) NSString* name;
+@property (nonatomic, strong) NSString* secret;
+@property (nonatomic, strong) NSString* photoID;
 @end
