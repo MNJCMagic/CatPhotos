@@ -14,6 +14,7 @@
 		27332226209247B800A9D607 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27332224209247B800A9D607 /* LaunchScreen.storyboard */; };
 		27332229209247B800A9D607 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 27332228209247B800A9D607 /* main.m */; };
 		273322312092496300A9D607 /* PhotoObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 273322302092496300A9D607 /* PhotoObject.m */; };
+		27EC2393209267E500EDC448 /* CatCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 27EC2392209267E500EDC448 /* CatCollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		27332228209247B800A9D607 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2733222F2092496300A9D607 /* PhotoObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoObject.h; sourceTree = "<group>"; };
 		273322302092496300A9D607 /* PhotoObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoObject.m; sourceTree = "<group>"; };
+		27EC2391209267E500EDC448 /* CatCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CatCollectionViewCell.h; sourceTree = "<group>"; };
+		27EC2392209267E500EDC448 /* CatCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CatCollectionViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +71,8 @@
 				2733222F2092496300A9D607 /* PhotoObject.h */,
 				273322302092496300A9D607 /* PhotoObject.m */,
 				2733221F209247B800A9D607 /* Main.storyboard */,
+				27EC2391209267E500EDC448 /* CatCollectionViewCell.h */,
+				27EC2392209267E500EDC448 /* CatCollectionViewCell.m */,
 				27332222209247B800A9D607 /* Assets.xcassets */,
 				27332224209247B800A9D607 /* LaunchScreen.storyboard */,
 				27332227209247B800A9D607 /* Info.plist */,
@@ -151,6 +156,7 @@
 				273322312092496300A9D607 /* PhotoObject.m in Sources */,
 				27332229209247B800A9D607 /* main.m in Sources */,
 				2733221B209247B800A9D607 /* AppDelegate.m in Sources */,
+				27EC2393209267E500EDC448 /* CatCollectionViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

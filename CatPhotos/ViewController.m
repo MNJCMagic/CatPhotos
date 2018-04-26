@@ -8,10 +8,13 @@
 
 #import "ViewController.h"
 #import "PhotoObject.h"
+#import "CatCollectionViewCell.h"
 
-@interface ViewController ()
+@interface ViewController () <UICollectionViewDelegate, UICollectionViewDataSource>
 @property (nonatomic, strong) NSArray* dataObjects;
 @property (nonatomic, strong) NSMutableArray<PhotoObject*>* photoObjects;
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+
 
 @end
 
@@ -19,6 +22,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.collectionView.delegate = self;
+    self.collectionView.dataSource = self;
+    NSMutableArray<PhotoObject*>* photoObjects = [[NSMutableArray alloc] init];
+    self.photoObjects = photoObjects;
     
     NSURL *url = [NSURL URLWithString:@"https://api.flickr.com/services/rest/?method=flickr.photos.search&format=json&nojsoncallback=1&api_key=671446b75c6c30cc03fd61ca2dc63cf1&tags=cat"];
     NSURLRequest *urlRequest = [[NSURLRequest alloc] initWithURL:url];
@@ -31,8 +39,7 @@
         }
         [self parseResponseData:data];
         [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-            // This will run on the main queue
-            //            [self.tableView reloadData];
+            [self.collectionView reloadData];
         }];
     }];
     [dataTask resume];
@@ -60,8 +67,31 @@
         NSLog(@"added");
         
     };
+    NSLog(@"%lu", (unsigned long)self.photoObjects.count);
 }
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return self.photoObjects.count;
+}
+
+// The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
+- (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    CatCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"catCell" forIndexPath:indexPath];
+    //check for imageView
     
+    
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 180, 180)];
+
+    cell.imageView.clipsToBounds = YES;
+    cell.imageView.contentMode = UIViewContentModeScaleAspectFit;
+    [cell addSubview:cell.imageView];
+    // put image in imageview
+    PhotoObject *tempObj = self.photoObjects[indexPath.item];
+    imageView.image = tempObj.image;
+    cell.imageView = imageView;
+    return cell;
+    
+}
     
     
     
